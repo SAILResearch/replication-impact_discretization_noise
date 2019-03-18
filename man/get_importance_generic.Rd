@@ -4,12 +4,14 @@
 \alias{get_importance_generic}
 \title{Function for generating the importance values of the classifiers}
 \usage{
-get_importance_generic(model, var)
+get_importance_generic(model, column_names, classifier)
 }
 \arguments{
 \item{model}{a r model. A trained classifier model whose importance is to be evaluated}
 
-\item{var}{a character vector, containing the columnames of the test data set}
+\item{column_names}{a character vector, containing the columnames of the test data set}
+
+\item{classifier}{The classifier for which the importance is to be computed. Currently supported types are 'rf','C5.0','glm','knn'}
 }
 \value{
 a numeric vector, with all the importance values for the features involved
